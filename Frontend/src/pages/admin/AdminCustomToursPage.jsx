@@ -87,7 +87,7 @@ const AdminCustomToursPage = () => {
 
   const logout = () => {
     localStorage.removeItem(SESSION_KEY);
-    navigate("/admin/auth");
+    navigate("/auth");
   };
 
   if (!user) {

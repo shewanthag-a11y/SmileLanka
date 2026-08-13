@@ -113,7 +113,7 @@ const AdminDashboard = () => {
 
   const logout = () => {
     localStorage.removeItem(SESSION_KEY);
-    navigate("/admin/auth");
+    navigate("/auth");
   };
 
   const handleStatusChange = async (bookingId, nextStatus) => {

@@ -90,6 +90,7 @@ const App = () => {
                     <Contact />
                   </>
                 } />
+                <Route path="/auth" element={<AuthLanding />} />
                 <Route path="/packages" element={<Packages />} />
                 <Route path="/packages/:id" element={<PackageTemplate />} />
                 <Route path="/custom-tour" element={<CustomTour />} />
@@ -138,8 +139,6 @@ const App = () => {
                   </>
                 } />
               </Routes>
-              {/* Show auth landing as an overlay on top of home when no session exists */}
-              {!hasAnySession && window.location.pathname === "/" && <AuthLanding />}
             </main>
             <Footer />
           </>

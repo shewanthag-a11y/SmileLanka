@@ -144,14 +144,25 @@ const Navbar = () => {
           </RouterLink>
         )}
       </li>
-      {!isUserLoggedIn && (
+      {!isUserLoggedIn && !isAdminLoggedIn && (
         <li className="hover:text-yellow-400 cursor-pointer transition-colors duration-300 font-medium">
           <RouterLink
-            to={isAdminLoggedIn ? "/admin" : "/admin/auth"}
+            to="/auth"
             className="block h-full w-full py-3 px-4 rounded-xl bg-amber-500/20 text-amber-200 hover:bg-amber-500/30 transition-all"
             onClick={() => setMobileMenuOpen(false)}
           >
-            {isAdminLoggedIn ? "Dashboard" : "Admin"}
+            Login / Register
+          </RouterLink>
+        </li>
+      )}
+      {isAdminLoggedIn && (
+        <li className="hover:text-yellow-400 cursor-pointer transition-colors duration-300 font-medium">
+          <RouterLink
+            to="/admin"
+            className="block h-full w-full py-3 px-4 rounded-xl bg-amber-500/20 text-amber-200 hover:bg-amber-500/30 transition-all"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Dashboard
           </RouterLink>
         </li>
       )}

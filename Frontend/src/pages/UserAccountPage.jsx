@@ -603,6 +603,7 @@ const UserAccountPage = () => {
     setAuthMode("login");
     setIsLoggedIn(false);
     setMessage({ type: "success", text: "You have been logged out." });
+    navigate("/auth");
   };
 
   if (!isLoggedIn) {
